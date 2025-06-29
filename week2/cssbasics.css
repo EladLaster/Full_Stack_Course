@@ -1,0 +1,54 @@
+.line1 {
+      font-size: 24px;
+      color: crimson;
+      font-family: 'Arial', sans-serif;
+      text-align: left;
+    }
+
+    .line2 {
+      font-size: 32px;
+      color: darkgreen;
+      font-family: 'Georgia', serif;
+      text-align: left;
+    }
+
+    .line3 {
+      font-size: 40px;
+      color: royalblue;
+      font-family: 'Courier New', monospace;
+      text-align: left;
+    }
+
+     body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .links-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.links-container a {
+  background-color: white;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.links-container a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.links-container img {
+  width: 100px;
+  height: auto;
+  display: block;
+}
+
