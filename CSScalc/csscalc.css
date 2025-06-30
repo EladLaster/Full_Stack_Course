@@ -1,0 +1,49 @@
+.container {
+  width: 600px;
+  margin: 200px auto;
+  font-size: 0;
+}
+
+.left {
+  display: inline-block;
+  width: calc(100% - 20px);
+  background-color: #d0eaff;
+  height: 100px;
+  font-size: 14px;
+  padding: 10px;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.right {
+  display: inline-block;
+  width: 20px;
+  background-color: #ffcccb;
+  height: 100px;
+  font-size: 14px;
+  padding: 10px 0;
+  text-align: center;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.container2 {
+  margin: 50px auto;
+  width: 40%;
+  background-color: #eee;
+  font-size: 0;
+
+}
+
+.section {
+  display: inline-block;
+  width: calc(100% / 3);
+  height: 100px;
+  background-color: #90caf9;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 16px; /* מגדירים מחדש את גודל הגופן */
+  line-height: 100px;
+  font-weight: bold;
+}
