@@ -8,7 +8,9 @@
 </head>
 
 <a id="top"></a>
+    <div class="bg-cv">
 
+        
     <header>
     <img src="https://media.licdn.com/dms/image/v2/D4D35AQHkXrq5IoaQ6w/profile-framedphoto-shrink_400_400/B4DZe7Wx52GUAc-/0/1751195000685?e=1751803200&v=beta&t=DFiPYKbKKHYNsvljIIL9sVgKGoz8L-rlt04cyq2hpes" alt="">
     <h1 style="color: red">Elad Laster</h1>
@@ -21,14 +23,18 @@
     <h1><em>About Me - </em><a href="projects.html">🛠️ View My Projects</a></h1>
     <hr>
     <h3>My name is <strong>Elad Laster</strong>, I'm 28 years old and I live in Ma'ale Adumim.</h3>
-    <h3>I studied computer science and mathematics, and I'm currently looking for my first job in the tech industry.</h3>
+    <h3>I studied <strong>computer science and mathematics</strong>, and I'm currently looking for my first job in the tech industry.</h3>
     <h1><em>My Goals</em></h1>
     <hr>
-    <h3>My dream is to become a software developer who builds tools that make people's lives better.</h3>
+    <h3>My dream is to become a <strong>software developer</strong> who builds tools that make people's lives better.</h3>
     <h3>(and maybe get rich along the way 😄)</h3>
 
-    <h1><em>My Favorite Things</em></h1>
+    </div>
+
+    <h1><em>My Favorite Things :</em></h1>
     <hr>
+
+    <div class="bg-hobbies">
 
   <p>Here are some of my favorite things in life — from hobbies and foods to movies and more.</p>
 
@@ -47,6 +53,8 @@
     </li>
   </ul>
 
+
+
   <h2>🍕 Favorite Foods</h2>
   <p>Delicious food is one of the joys of life! Here's a list of my top dishes:</p>
   <ol>
@@ -64,10 +72,12 @@
     <li>Brazil</li>
   </ol>
 
+    </div>
+
   <hr>
 
 <table>
-  <h1>Programming Languages I've Worked With</h1>
+  <h1>Programming Languages I've Worked With :</h1>
   <caption>This table shows my programming languages skills, experience level, related projects or companies, and the years I worked with them.</p>
   <thead>
     <tr>
@@ -119,11 +129,11 @@
 
 <hr>
 
-  <h1>Contact Me</h1>
+  <h1>Contact Us</h1>
 
 <form>
 <fieldset>
-  <legend>Contact Info</legend>
+  <legend>Personal Info</legend>
 
 <label for="full name">Name:</label>
 <input type="text" id="name" placeholder="Your name" required />
@@ -133,14 +143,10 @@
 <label for="email">Email:</label>
 <input type="email" id="email" placeholder = "Your@gmail.com" required />
 
-<br/><br/>
 
-<label for="phone">Phone:</label>
-<input type="tel" id="phone" placeholder="(+555) 1234-5678" required />
-    
 </fieldset>
 <fieldset>
-    <legend>Message Details</legend>
+    <legend>Message</legend>
 
     <label for="subject">Select Subject:</label>
     <select id="subject" name="subject" required>
@@ -154,33 +160,25 @@
 
     <br/><br/>
 
+    <p>Priority:</p>
+    <input type="radio" id="low" name="prio" value="low" required>
+    <label for="low">Low</label>
+
+    <input type="radio" id="medium" name="prio" value="medium">
+    <label for="medium">Medium</label>
+
+    <input type="radio" id="high" name="prio" value="high">
+    <label for="high">High</label>
+
+    <br/><br/>
+
     <label for="message">Your Message:</label><br/>
     <textarea id="message" name="message" placeholder="Write your message here..." required rows="5" cols="40"></textarea>
   </fieldset>
 
-  <br/>
 
   <fieldset>
     <legend>Preferences</legend>
-
-    <label for="contact-method">Preferred Contact Method:</label>
-    <select id="contact-method" name="contact-method" required>
-      <option value="">Select an option</option>
-      <option value="email">Email</option>
-      <option value="phone">Phone</option>
-    </select>
-
-    <br/><br/>
-
-    <p>Gender:</p>
-    <input type="radio" id="male" name="gender" value="male" required>
-    <label for="male">Male</label>
-
-    <input type="radio" id="female" name="gender" value="female">
-    <label for="female">Female</label>
-
-    <br/><br/>
-
     <input type="checkbox" id="subscribe" name="subscribe">
     <label for="subscribe">Yes, I want to receive updates</label>
   </fieldset>
