@@ -39,10 +39,10 @@
   width: calc(100% / 3);
   height: 100px;
   background-color: #90caf9;
-  border: 1px solid #333; /* border color */
+  border: 1px solid #333;
   box-sizing: border-box;
   text-align: center;
   font-size: 16px;
   line-height: 100px;
-  font-weight: bold; /* strong text */   
+  font-weight: bold;
 }
