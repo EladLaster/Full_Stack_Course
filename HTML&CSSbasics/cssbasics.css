@@ -117,12 +117,17 @@ table {
   .image-container {
   width: 600px;
   height: 400px;
-  background-image: url("https://tse4.mm.bing.net/th/id/OIP.-wdRAWKnHLWE-aF2OoNK9gHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3");
-  background-size: cover;
-  background-position: center;
+  position: relative;
 }
-.transparent-title,
+.transparent-title{
+  position: absolute;
+  top: 0px;
+  margin: 0;
+  padding: 0;
+}
 .solid-title {
+  position: absolute;
+  top: 40px;
   margin: 0;
   padding: 0;
 }

@@ -1,0 +1,35 @@
+body {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+}
+
+.row {
+  display: flex;
+  border: black 2px solid;
+}
+
+.col1, .col2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex: 1;
+    padding: 20px;
+    border: 2px solid black;
+    color: black;
+    font-weight: bold;
+}
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #6495ec;
+  color: white;
+  font-weight: bold;
+}
+p {
+  font-size: 1.2rem;
+  color: black;
+}
+

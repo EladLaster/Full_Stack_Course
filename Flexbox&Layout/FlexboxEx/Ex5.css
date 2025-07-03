@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #dcdcdc;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.text-row {
+  margin-bottom: 50px;
+}
+
+.text-row p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.boxes-row {
+  display: flex;
+  gap: 20px;
+  height: 400px;
+margin: 0 auto;
+}
+
+.big-box-col {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.small-box-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.box {
+  background-color: #6495ec;
+  height: 100%;
+}
+
