@@ -19,7 +19,7 @@ body {
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
 }
 
 h2 {
@@ -33,6 +33,15 @@ h3 {
 p{
   font-size: 1.2rem;  
     color: #67778e;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #1e40af; /* או צבע אחר שאתה מעדיף להובר */
 }
 
 /* === Header === */
@@ -371,13 +380,13 @@ section[id] {
   }
   
   .profile-text h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
   .about-text h2 {
-    text-align: center;
+    font-size: 2rem;
   }
   .skills h3 {
-    text-align: center;
+    font-size: 1.5rem;
   }
   .profile-text p {
     font-size: 1rem;
