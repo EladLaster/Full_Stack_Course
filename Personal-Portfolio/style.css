@@ -56,6 +56,17 @@ p{
   font-weight: bold;
 }
 
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+}
+
 .nav-list {
   list-style: none;
   display: flex;
@@ -72,44 +83,44 @@ p{
   color: #1e40af;
 }
 
-/* === Hero === */
-.hero-section {
+/* === Profile === */
+.profile-section {
   background: linear-gradient(to right, #f8fafc, #e2e8f0);
   padding: 2.5rem 0;
 }
 
-.hero-container {
+.profile-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
   max-width: 1000px;
-  margin: 0 auto;        /*  מרכז את התוכן באמצע הדף */
-  padding: 0 1rem;       /*  ריווח פנימי בצדדים למסכים צרים */
-  min-height: 300px; /*  מגביל את הגובה */
+  margin: 0 auto;
+  padding: 0 1rem; 
+  min-height: 300px;
 }
 
 
-.hero-text {
+.profile-text {
   flex: 1;
 }
-.hero-image {
-    flex-shrink: 0;                /* מונע התכווצות */
-    max-width: 300px;              /* מגביל רוחב */
-    border-radius: 50%;    /* הפוך את המיכל למעגל */
+.profile-image {
+  flex-shrink: 0;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
     overflow: hidden;
 }
 
-.hero-image img {
+.profile-image img {
   width: 100%;
   height: 100%;  
-  border-radius: 50%;    /* להפוך למעגל */
-  object-fit: cover;     /* חיתוך חכם */
+  object-fit: cover;
   display: block;
 }
 
-
+/* === Buttons === */
 
 .btn {
   display: inline-block;
@@ -189,7 +200,8 @@ p{
   background: #1e40af;
 }
 
-/* % */
+/* == % == */
+
 .js    { width: 90%; }
 .react { width: 80%; }
 .node  { width: 75%; }
@@ -222,8 +234,8 @@ p{
 
 .project-card img {
   width: 100%;
-  height: 240px;          /* גובה קבוע לתמונה */
-  object-fit: cover;      /* ממלא את המסגרת בצורה חכמה */
+  height: 240px;
+  object-fit: cover;
   display: block;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -231,7 +243,7 @@ p{
 
 
 .project-image {
-  background-color: #e2e8f0;
+  /* background-color: #e2e8f0; */
   height: 150px;
   display: flex;
   align-items: center;
@@ -324,25 +336,11 @@ section[id] {
   scroll-margin-top: 80px;
 }
 
-.menu-toggle {
-  display: none;
-}
-
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  user-select: none;
-}
-
 /* === Responsive === */
 @media (max-width: 768px) {
-.hero-image {
-    max-width: 220px;
-    margin: 0 auto;
-  }
 
-  .hero-container,
+
+  .profile-container,
   .about-container,
   .projects-grid,
   .contact-container {
@@ -360,13 +358,19 @@ section[id] {
   .nav-list {
     gap: 1rem;
   }
+
+  .profile-image {
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+  }
   
-  .hero-text {
+  .profile-text {
     text-align: center;
     margin-bottom: 1.5rem;
   }
   
-  .hero-text h1 {
+  .profile-text h1 {
     font-size: 2.2rem;
   }
   .about-text h2 {
@@ -375,7 +379,7 @@ section[id] {
   .skills h3 {
     text-align: center;
   }
-  .hero-text p {
+  .profile-text p {
     font-size: 1rem;
   }
   .contact-info .social-icons {
@@ -391,14 +395,14 @@ section[id] {
   max-width: none;
   display: block;
 }
+ .mobile-nav {
+    width: 100%;
+  }
 
 .hamburger {
     display: block;
   }
 
-  .mobile-nav {
-    width: 100%;
-  }
 
   .nav-list {
     display: none;
