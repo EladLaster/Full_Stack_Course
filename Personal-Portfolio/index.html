@@ -1,83 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elad Laster - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elad Laster - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <header class="header">
-    <div class="container header-container">
-      <h2 class="logo">Elad Laster</h2>
-      <nav class="nav">
-        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-        <label for="menu-toggle" class="hamburger">&#9776;</label>
-        <div class="mobile-nav">
-        <ul class="nav-list">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      </nav>
-    </div>
-  </header>
-
-  <section id="home" class="profile-section">
-    <div class="container profile-container">
-      <div class="profile-text">
-        <h1>Full-Stack Developer</h1>
-        <p>I create beautiful and functional web experiences using modern technologies. Passionate about clean code and user-centered design.</p>
-        <a href="#contact" class="btn">Get in Touch</a>
-      </div>
-    <div class="profile-image">
-        <img src="images/me.jpg" alt="Elad Laster profile photo" /></div>
-    </div>
-  </section>
-
-  <section id="about" class="about-section">
-    <div class="container about-container">
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>I'm a passionate full-stack developer with a keen eye for design and a love for creating seamless user experiences. With expertise in HTML, CSS, and JavaScript, I bring ideas to life through clean, efficient code. When I'm not coding, you can find me exploring new technologies, reading design blogs, or enjoying a good cup of coffee while sketching out new project ideas.</p>
-      </div>
-      <div class="skills">
-        <h3>Skills</h3>
-        <ul class="skills-list">
-          <li><span class="skill-label">JavaScript</span><span class="bar"><span class="fill js"></span></span></li>
-          <li><span class="skill-label">React</span><span class="bar"><span class="fill react"></span></span></li>
-          <li><span class="skill-label">NodeJS</span><span class="bar"><span class="fill node"></span></span></li>
-          <li><span class="skill-label">MongoDB</span><span class="bar"><span class="fill mongo"></span></span></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="projects-section">
-    <div class="container">
-      <h2 class="section-title">My Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-            <img src="https://private-user-images.githubusercontent.com/118683420/313432361-7c7f9d80-21cd-4be4-a796-8cfb23780ca2.jpeg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTExOTkwMDAsIm5iZiI6MTc1MTE5ODcwMCwicGF0aCI6Ii8xMTg2ODM0MjAvMzEzNDMyMzYxLTdjN2Y5ZDgwLTIxY2QtNGJlNC1hNzk2LThjZmIyMzc4MGNhMi5qcGVnP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI1MDYyOSUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTA2MjlUMTIwNTAwWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MGI3Y2YyYWZjYjg1ODc2ZWFmYTdmZjY0NTAxYzAxYTZkMGFiMGEzZjA4MjcxNWYzMWRlMmFmNTRlOGZhNWIzZSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.oEghyw7OjngVVb5_IJiwI7O-G9bXWXLwDTMX3ffaPtM" alt="Game Screenshot" />
-          <div class="project-content">
-            <h4>Dungeons & Rats - Unity Game</h4>
-            <p>A therapeutic game to assist war-injured patients in rehabilitation. built with Unity and C#. </p>
-            <a href="https://github.com/EladLaster/The-Runner-Mouse.git" class="btn yellow">View Project</a>
+  <body>
+    <header class="header">
+      <div class="container header-container">
+        <h2 class="logo">Elad Laster</h2>
+        <nav class="nav">
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+          <label for="menu-toggle" class="hamburger">&#9776;</label>
+          <div class="mobile-nav">
+            <ul class="nav-list">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
           </div>
+        </nav>
+      </div>
+    </header>
+
+    <section id="home" class="profile-section">
+      <div class="container profile-container">
+        <div class="profile-text">
+          <h1>Full-Stack Developer</h1>
+          <p>
+            I create beautiful and functional web experiences using modern
+            technologies. Passionate about clean code and user-centered design.
+          </p>
+          <a href="#contact" class="btn">Get in Touch</a>
         </div>
-        <div class="project-card">
-            <img src="https://github.com/EladLaster/Swipe-N-Borrow/blob/master/Screenshots/SplashScreen.png?raw=true" alt="App Screenshot" />
-          <div class="project-content">
-            <h4>Swipe-N-Borrow - Android App</h4>
-            <p>An Android app to streamline book borrowing and lending. Built with Android Studio, Firebase and Java.</p>
-            <a href="https://github.com/EladLaster/Swipe-N-Borrow" class="btn yellow">View Project</a>
+        <div class="profile-image">
+          <img src="images/me.jpg" alt="Elad Laster profile photo" />
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="container about-container">
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>
+            I'm a passionate full-stack developer with a keen eye for design and
+            a love for creating seamless user experiences. With expertise in
+            HTML, CSS, and JavaScript, I bring ideas to life through clean,
+            efficient code. When I'm not coding, you can find me exploring new
+            technologies, reading design blogs, or enjoying a good cup of coffee
+            while sketching out new project ideas.
+          </p>
+        </div>
+        <div class="skills">
+          <h3>Skills</h3>
+          <ul class="skills-list">
+            <li>
+              <span class="skill-label">JavaScript</span
+              ><span class="bar"><span class="fill js"></span></span>
+            </li>
+            <li>
+              <span class="skill-label">React</span
+              ><span class="bar"><span class="fill react"></span></span>
+            </li>
+            <li>
+              <span class="skill-label">NodeJS</span
+              ><span class="bar"><span class="fill node"></span></span>
+            </li>
+            <li>
+              <span class="skill-label">MongoDB</span
+              ><span class="bar"><span class="fill mongo"></span></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <img
+              src="https://private-user-images.githubusercontent.com/118683420/313432361-7c7f9d80-21cd-4be4-a796-8cfb23780ca2.jpeg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTExOTkwMDAsIm5iZiI6MTc1MTE5ODcwMCwicGF0aCI6Ii8xMTg2ODM0MjAvMzEzNDMyMzYxLTdjN2Y5ZDgwLTIxY2QtNGJlNC1hNzk2LThjZmIyMzc4MGNhMi5qcGVnP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI1MDYyOSUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTA2MjlUMTIwNTAwWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MGI3Y2YyYWZjYjg1ODc2ZWFmYTdmZjY0NTAxYzAxYTZkMGFiMGEzZjA4MjcxNWYzMWRlMmFmNTRlOGZhNWIzZSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.oEghyw7OjngVVb5_IJiwI7O-G9bXWXLwDTMX3ffaPtM"
+              alt="Game Screenshot"
+            />
+            <div class="project-content">
+              <h4>Dungeons & Rats - Unity Game</h4>
+              <p>
+                A therapeutic game to assist war-injured patients in
+                rehabilitation. built with Unity and C#.
+              </p>
+              <a
+                href="https://github.com/EladLaster/The-Runner-Mouse.git"
+                class="btn yellow"
+                >View Project</a
+              >
+            </div>
           </div>
-        </div>
-        <!-- <div class="project-card">
+          <div class="project-card">
+            <img
+              src="https://github.com/EladLaster/Swipe-N-Borrow/blob/master/Screenshots/SplashScreen.png?raw=true"
+              alt="App Screenshot"
+            />
+            <div class="project-content">
+              <h4>Swipe-N-Borrow - Android App</h4>
+              <p>
+                An Android app to streamline book borrowing and lending. Built
+                with Android Studio, Firebase and Java.
+              </p>
+              <a
+                href="https://github.com/EladLaster/Swipe-N-Borrow"
+                class="btn yellow"
+                >View Project</a
+              >
+            </div>
+          </div>
+          <!-- <div class="project-card">
           <div class="project-image">Project Image</div>
           <div class="project-content">
             <h4>Task Manager</h4>
@@ -85,72 +127,96 @@
             <a href="#" class="btn yellow">View Project</a>
           </div>
         </div> -->
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact-section">
-  <h2 class="section-title">Get In Touch</h2>
-  <div class="container contact-container">
-    <form id="contact-form" class="contact-form">
-      <label>Name
-        <input type="text" name="name" required>
-      </label>
-      <label>Email
-        <input type="email" name="email" required>
-      </label>
-      <label>Message
-        <textarea name="message" rows="5" required></textarea>
-      </label>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-      <div class="contact-info">
-        <h3>Contact Information</h3>
-        <p>📧 <a href="mailto:eladlaster1@gmail.com">eladlaster1@gmail.com</a></p>
-        <p>📞 <a href="tel:+972523802814">+972 52-380-2814</a></p>
-        <p>📍 Jerusalem , Israel</p>
-        <div class="social-icons">
-          <a href="http://linkedin.com/in/elad-laster1" target="_blank" class="icon linkedin" aria-label="LinkedIn">
-            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
-          </a>
-          <a href="https://github.com/EladLaster" target="_blank" class="icon github" aria-label="GitHub">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" />
-          </a>
-          <a href="#" target="_blank" class="icon x" aria-label="X (Twitter)">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="X" />
-          </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 Elad Laster. All rights reserved.</p>
-  </footer>
+    <section id="contact" class="contact-section">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="container contact-container">
+        <form id="contact-form" class="contact-form">
+          <label
+            >Name
+            <input type="text" name="name" required />
+          </label>
+          <label
+            >Email
+            <input type="email" name="email" required />
+          </label>
+          <label
+            >Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <p>
+            📧 <a href="mailto:eladlaster1@gmail.com">eladlaster1@gmail.com</a>
+          </p>
+          <p>📞 <a href="tel:+972523802814">+972 52-380-2814</a></p>
+          <p>📍 Jerusalem , Israel</p>
+          <div class="social-icons">
+            <a
+              href="http://linkedin.com/in/elad-laster1"
+              target="_blank"
+              class="icon linkedin"
+              aria-label="LinkedIn"
+            >
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                alt="LinkedIn"
+              />
+            </a>
+            <a
+              href="https://github.com/EladLaster"
+              target="_blank"
+              class="icon github"
+              aria-label="GitHub"
+            >
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/733/733553.png"
+                alt="GitHub"
+              />
+            </a>
+            <a href="#" target="_blank" class="icon x" aria-label="X (Twitter)">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+                alt="X"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  // אתחל את EmailJS עם ה-User ID (Public Key)
-  emailjs.init("lutY6Ox96TezNF9ep");
+    <footer class="footer">
+      <p>&copy; 2025 Elad Laster. All rights reserved.</p>
+    </footer>
 
-  // תפס את הטופס לפי ה-ID
-  const form = document.getElementById('contact-form');
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      // אתחל את EmailJS עם ה-User ID (Public Key)
+      emailjs.init("lutY6Ox96TezNF9ep");
 
-  form.addEventListener('submit', function(event) {
-    event.preventDefault(); // מונע ריענון הדף
+      // תפס את הטופס לפי ה-ID
+      const form = document.getElementById("contact-form");
 
-    // שלח את הטופס עם EmailJS
-    emailjs.sendForm('service_jh2u1eh', 'template_19sy60a', this)
-      .then(() => {
-        alert('Message sent successfully!');
-        form.reset(); // איפוס הטופס
-      }, (error) => {
-        alert('Failed to send message. Please try again later.');
-        console.error('EmailJS error:', error);
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // מונע ריענון הדף
+
+        // שלח את הטופס עם EmailJS
+        emailjs.sendForm("service_jh2u1eh", "template_19sy60a", this).then(
+          () => {
+            alert("Message sent successfully!");
+            form.reset(); // איפוס הטופס
+          },
+          (error) => {
+            alert("Failed to send message. Please try again later.");
+            console.error("EmailJS error:", error);
+          }
+        );
       });
-  });
-</script>
-
-</body>
-
+    </script>
+  </body>
 </html>
