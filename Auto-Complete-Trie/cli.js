@@ -1,5 +1,7 @@
-const readline = require('readline');
-const { AutoCompleteTrie } = require('./app.js');
+// const readline = require('readline');
+// const { AutoCompleteTrie } = require('./app.js');
+import readline from 'node:readline';
+import { AutoCompleteTrie } from "./app.js";
 
 const trie = new AutoCompleteTrie();
 
@@ -98,6 +100,7 @@ rl.on('line', (line) => {
   }
 
   rl.prompt();
+  
 }).on('close', () => {
   console.log('Goodbye!');
   process.exit(0);

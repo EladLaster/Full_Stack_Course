@@ -4,6 +4,7 @@
   },
   "devDependencies": {
     "jest": "^30.0.4"
-  }
+  },
+  "type": "module"
 }
 

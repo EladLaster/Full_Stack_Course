@@ -21,7 +21,7 @@ describe('addWord function', () => {
   test('should handle adding duplicate word', () => {
     const newTrie = new AutoCompleteTrie();
     newTrie.addWord("cat");
-    newTrie.addWord("cat"); // should not throw or change state
+    newTrie.addWord("cat");
     expect(newTrie.findWord("cat")).toBe(true);
   });
 
@@ -32,6 +32,15 @@ describe('addWord function', () => {
     newTrie.addWord(undefined);
     expect(newTrie.findWord("123")).toBe(false);
   });
+
+  test('addWord should treat "Dog" and "dog" the same', () => {
+    const testTrie = new AutoCompleteTrie();
+    testTrie.addWord("Dog");
+    expect(testTrie.findWord("dog")).toBe(true);
+    expect(testTrie.findWord("DOG")).toBe(true);
+    expect(testTrie.predictWords("do")).toEqual(expect.arrayContaining(["dog"]));
+  });
+
 });
 
 describe('findWord function', () => {
@@ -43,9 +52,9 @@ describe('findWord function', () => {
 
   test('should return false if word does not exist', () => {
     expect(trie.findWord("horse")).toBe(false);
-    expect(trie.findWord("ca")).toBe(false);  // prefix only
+    expect(trie.findWord("ca")).toBe(false);
     expect(trie.findWord("d")).toBe(false);
-    expect(trie.findWord("catt")).toBe(false);  // close miss
+    expect(trie.findWord("catt")).toBe(false);
   });
 
   test('should return false for empty/null/invalid types', () => {
@@ -56,8 +65,10 @@ describe('findWord function', () => {
     expect(trie.findWord({})).toBe(false);
   });
 
-  test('should be case-sensitive', () => {
-    expect(trie.findWord("Cat")).toBe(false); // 'C' != 'c'
+  test('should be case-insensitive (accept Cat as cat)', () => {
+    expect(trie.findWord("Cat")).toBe(true);
+    expect(trie.findWord("CAR")).toBe(true);
+    expect(trie.predictWords("CA")).toEqual(expect.arrayContaining(["cat", "car"]));
   });
 });
 
@@ -87,20 +98,26 @@ describe('predictWords function', () => {
 
   test('should return words sorted by frequency descending', () => {
     const testTrie = new AutoCompleteTrie();
-    testTrie.addWord('alpha');
+    testTrie.addWord('alpsa');
     testTrie.addWord('alps');
     testTrie.addWord('alpine');
 
-    // שימושים שונים
     testTrie.useWord('alpine'); // freq = 1
     testTrie.useWord('alpine'); // freq = 2
-    testTrie.useWord('alpha');  // freq = 1
+    testTrie.useWord('alpsa');  // freq = 1
 
-    const predictions = testTrie.predictWords('alp');
-    expect(predictions).toEqual(['alpine', 'alpha','alps']); // alps freq=0, alpine=2
+    const predictions = testTrie.predictWords('alps');
+    expect(predictions).toEqual(['alpsa','alps']); // alpsa=1, alps=0
 
-    const allPredictions = testTrie.predictWords('al');
-    expect(allPredictions).toEqual(['alpine', 'alpha', 'alps']); // alpine=2, alpha=1, alps=0
+    const allPredictions = testTrie.predictWords('alp');
+    expect(allPredictions).toEqual(['alpine', 'alpsa', 'alps']); // alpine=2, alpsa=1, alps=0
+  });
+
+  test('predictWords should ignore case in prefix', () => {
+    const trie = new AutoCompleteTrie();
+    trie.addWord('cat');
+    trie.addWord('car');
+    expect(trie.predictWords('CA')).toEqual(expect.arrayContaining(['cat', 'car']));
   });
 });
 
@@ -115,5 +132,12 @@ describe('useWord function', () => {
   test('should return false for non-existing word', () => {
     const testTrie = new AutoCompleteTrie();
     expect(testTrie.useWord('banana')).toBe(false);
+  });
+  test('useWord should work regardless of letter casing', () => {
+    const testTrie = new AutoCompleteTrie();
+    testTrie.addWord("hello");
+    expect(testTrie.useWord("HELLO")).toBe(1);
+    expect(testTrie.useWord("Hello")).toBe(2);
+    expect(testTrie.useWord("hello")).toBe(3);
   });
 });
