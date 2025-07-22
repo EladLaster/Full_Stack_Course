@@ -80,15 +80,32 @@ rl.on('line', (line) => {
       }
       break;
 
+      case 'delete':
+        if (args.length === 0) {
+          console.log("Please provide a word to delete.");
+        } else {
+          const word = args[0];
+          const deleted = trie.deleteWord(word);
+          if (deleted) {
+            console.log(`✓ Deleted '${word}' from dictionary\n`);
+          } else {
+            console.log(`✗ '${word}' not found in dictionary\n`);
+          }
+        }
+        break;
+
+
     case 'help':
       console.log("Commands:");
       console.log("  add <word>        - Add word to dictionary");
       console.log("  find <word>       - Check if word exists");
       console.log("  complete <prefix> - Get completions");
       console.log("  use <word>        - Increment usage count for a word");
+      console.log("  delete <word>     - Delete word from dictionary");
       console.log("  help              - Show this message");
       console.log("  exit              - Quit program\n");
       break;
+
 
     case 'exit':
       rl.close();

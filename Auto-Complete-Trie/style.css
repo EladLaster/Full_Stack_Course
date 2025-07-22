@@ -3,9 +3,20 @@ body {
   background-color: #f9f9f9;
   margin: 0;
   padding: 2rem;
+  /* שינינו מ flex column ל default, כי יש לנו container שהוא flex */
+}
+
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.search-area {
+  flex: 1;
 }
 
 h1 {
@@ -61,4 +72,79 @@ h1 {
 .suggestions li:focus {
   background-color: #e6f0ff;
   outline: none;
+}
+
+/* CLI UI styles */
+
+.cli-container {
+  width: 320px;
+  background-color: #f3f3f3;
+  padding: 20px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  /* מוסתר כברירת מחדל */
+}
+
+.cli-container.hidden {
+  display: none;
+}
+
+#cliInput {
+  width: 100%;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 14px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+#cliRun {
+  margin-top: 10px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#cliOutput {
+  background-color: #111;
+  color: #0f0;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  min-height: 100px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+#cliStatus {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #555;
+  font-style: italic;
+}
+
+/* כפתור toggle */
+
+#toggleCLI {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1500;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  background-color: #005fcc;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 95, 204, 0.7);
+  transition: background-color 0.3s ease;
+}
+
+#toggleCLI:hover {
+  background-color: #0044a5;
 }

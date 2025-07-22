@@ -3,16 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Autocomplete Trie Search</title>
+  <title>Autocomplete Trie Search + CLI UI</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>🔍 Autocomplete Search</h1>
-  <div class="search-container">
-    <input type="text" id="searchBox" placeholder="Type a word or prefix..." autocomplete="off" />
-    <ul id="suggestions" class="suggestions"></ul>
+  <button id="toggleCLI" aria-label="Toggle Admin Console">🖥️ Admin Console</button>
+
+  <div class="container">
+    <main class="search-area">
+      <h1>🔍 Autocomplete Search</h1>
+      <div class="search-container">
+        <input type="text" id="searchBox" placeholder="Type a word or prefix..." autocomplete="off" />
+        <ul id="suggestions" class="suggestions"></ul>
+      </div>
+    </main>
+
+    <nav class="cli-container hidden" aria-label="Admin Console">
+      <h2>🖥️ CLI UI</h2>
+      <textarea id="cliInput" rows="3" placeholder="Write commands here (e.g. add apple, use apple, complete ap)"></textarea>
+      <button id="cliRun">Run</button>
+      <pre id="cliOutput"></pre>
+      <div id="cliStatus"></div>
+    </nav>
   </div>
 
   <script type="module" src="main.js"></script>
+  <script type="module" src="cliui.js"></script>
+  <script>
+    const toggleBtn = document.getElementById('toggleCLI');
+    const cli = document.querySelector('.cli-container');
+
+    toggleBtn.addEventListener('click', () => {
+      cli.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
