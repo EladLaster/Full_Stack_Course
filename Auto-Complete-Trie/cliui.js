@@ -4,7 +4,7 @@ export function setupCLI(trie) {
   const runButton = document.getElementById('cliRun');
   const status = document.getElementById('cliStatus');
   const cliContainer = document.querySelector('.cli-container');
-  status.textContent = '💡 Type commands like: add apple, use apple, complete ap, help, exit';
+  status.textContent = '💡 Type commands like: add apple, use apple, complete ap, delete apple, help, exit';
 
   let commandHistory = [];
   let historyIndex = -1;
@@ -57,14 +57,11 @@ export function setupCLI(trie) {
             if(param.length === 0) {
                 results.push('❌ Please provide a prefix for complete');
             } else {
-                // שימוש בפונקציה _allWordsWithFreq שמחזירה מערך של {word, freq}
                 const suggestionsWithFreq = trie._allWordsWithFreq(param);
                 if (suggestionsWithFreq.length === 0) {
                 results.push(`✨ no suggestions for "${param}"`);
                 } else {
-                // למיין לפי freq יורד (כבר ממוין בדרך כלל אבל לוודא)
                 suggestionsWithFreq.sort((a,b) => b.freq - a.freq);
-                // להרכיב מחרוזת עם מילה ותדירות בצד
                 const detailed = suggestionsWithFreq.map(({word, freq}) => `${word}(${freq})`);
                 results.push(`✨ suggestions for "${param}": ${detailed.join(', ')}`);
                 }

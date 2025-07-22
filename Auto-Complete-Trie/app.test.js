@@ -1,4 +1,5 @@
-const { AutoCompleteTrie } = require('./app.js');
+// const { AutoCompleteTrie } = require('./app.js');
+import { AutoCompleteTrie } from "./app.js";
 
 const trie = new AutoCompleteTrie();
 trie.addWord("cat");
@@ -141,3 +142,48 @@ describe('useWord function', () => {
     expect(testTrie.useWord("hello")).toBe(3);
   });
 });
+
+describe('deleteWord function', () => {
+  let trie;
+
+  beforeEach(() => {
+    trie = new AutoCompleteTrie();
+    trie.addWord('cat');
+    trie.addWord('car');
+    trie.addWord('dog');
+  });
+
+  test('should delete an existing word', () => {
+    expect(trie.findWord('cat')).toBe(true);
+    const deleted = trie.deleteWord('cat');
+    expect(deleted).toBe(true);
+    expect(trie.findWord('cat')).toBe(false);
+  });
+
+  test('should return false when deleting a non-existing word', () => {
+    const deleted = trie.deleteWord('horse');
+    expect(deleted).toBe(false);
+  });
+
+  test('should be case-insensitive when deleting', () => {
+    expect(trie.findWord('dog')).toBe(true);
+    const deleted = trie.deleteWord('DOG');
+    expect(deleted).toBe(true);
+    expect(trie.findWord('dog')).toBe(false);
+  });
+
+  test('should not delete partial matches', () => {
+    const deleted = trie.deleteWord('ca'); // partial prefix, not a full word
+    expect(deleted).toBe(false);
+    expect(trie.findWord('car')).toBe(true);
+    expect(trie.findWord('cat')).toBe(true);
+  });
+
+  test('should return false when deleting invalid inputs', () => {
+    expect(trie.deleteWord('')).toBe(false);
+    expect(trie.deleteWord(null)).toBe(false);
+    expect(trie.deleteWord(undefined)).toBe(false);
+    expect(trie.deleteWord(123)).toBe(false);
+  });
+});
+
