@@ -1,0 +1,22 @@
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;              
+}
+
+.box { 
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 20px;
+  color: green;
+  text-align: center;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form with Labels</title>
+  </head>
+  <body>
+    <div id="container">
+      <div class="form-group">
+        <label for="inputName">NAME</label>
+        <input type="text" id="inputName" placeholder="Write your name" />
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <label for="inputSalary">DESIRED SALARY</label>
+          <input
+            type="text"
+            id="inputSalary"
+            placeholder="Write your salary"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="inputDate">BIRTHDAY</label>
+          <input type="date" id="inputDate" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputTel">PHONE</label>
+        <input type="tel" id="inputTel" placeholder="Write your phone number" />
+      </div>
+
+      <div class="row2">
+        <div id="errorMessages"></div>
+        <button id="submitBtn">Submit</button>
+      </div>
+    </div>
+
+    <script src="ex4.js"></script>
+  </body>
+</html>
