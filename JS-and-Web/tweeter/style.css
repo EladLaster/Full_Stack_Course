@@ -1,0 +1,139 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e8f0f1;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.new-post {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+#post-input {
+  flex: 4;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#twit-button {
+  flex : 1;
+  background-color: #0095ff;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+#twit-button:hover {
+  background-color: #007edc;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+#twit-button:active {
+  transform: scale(0.97);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.post-card {
+  background-color: #f3fafa;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.post-text {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.comments-list {
+  margin-bottom: 10px;
+}
+
+.comment-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.comment-item .comment-text {
+  margin-left: 5px;
+}
+
+.btn-delete-comment {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.btn-delete-comment:hover {
+  background-color: rgba(255, 77, 77, 0.1);
+  color: #e04343;
+}
+
+.btn-delete-comment:active {
+  transform: scale(0.95);
+}
+
+
+.comment-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.comment-input {
+  flex: 1;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.comment-button {
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-delete-post {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+.btn-delete-post:hover {
+  background-color: #e04343;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+}
+
+.btn-delete-post:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
