@@ -1,0 +1,118 @@
+/* לקחתי את הקובץ הזה מצ'ט ג'יפיטי כדי להקל על העבודה שלי , שיהיה לי יותר קל לבצי בדיקות על המאגר ספרים
+/* כל שאר הקבצים מעשה ידי - אלעד לסטר
+
+/* בסיס */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #f0f0f5;
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  user-select: none;
+}
+
+/* כותרת */
+h2 {
+  font-size: 3rem;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  letter-spacing: 1.2px;
+}
+
+/* אזור החיפוש */
+#isbn-input {
+  width: 320px;
+  padding: 14px 18px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50px 0 0 50px;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+#isbn-input:focus {
+  box-shadow: 0 0 10px 3px #a18cff;
+  background-color: #fff;
+  color: #333;
+}
+
+/* כפתור חיפוש */
+#search-btn {
+  padding: 14px 28px;
+  font-size: 18px;
+  border: none;
+  background: #a18cff;
+  color: #333;
+  cursor: pointer;
+  border-radius: 0 50px 50px 0;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(161, 140, 255, 0.7);
+  transition: background-color 0.3s ease, transform 0.15s ease;
+}
+
+#search-btn:hover {
+  background-color: #876fff;
+  box-shadow: 0 6px 18px rgba(135, 111, 255, 0.85);
+  transform: scale(1.05);
+}
+
+#search-btn:active {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+/* מיכל הספרים */
+#books {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* כל ספר */
+#books > div {
+  background: #fff;
+  color: #333;
+  padding: 20px 24px;
+  border-radius: 15px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#books > div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* כותרת ספר */
+#books h3 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: #5a3eeb;
+}
+
+/* פסקאות מידע */
+#books p {
+  margin: 6px 0;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+/* קו הפרדה */
+#books hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #5a3eeb, transparent);
+  margin-top: 20px;
+}
