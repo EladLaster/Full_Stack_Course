@@ -3,65 +3,54 @@ import { renderPosts } from './render.js';
 
 const tweeter = new Tweeter();
 
+// הפניה לאלמנטים
 const postInput = document.getElementById("post-input");
 const twitButton = document.getElementById("twit-button");
+const postsContainer = document.getElementById("posts");
 
-
-
-function addEventListeners() {
-    const deletePostButtons = document.querySelectorAll(".btn-delete-post");
-    const commentButtons = document.querySelectorAll(".comment-button");
-    const deleteCommentButtons = document.querySelectorAll(".btn-delete-comment");
-
-
-  deletePostButtons.forEach(button => {
-    button.addEventListener("click", function () {
-      const postID = this.dataset.post;
-      tweeter.removePost(postID);
-      refresh();
-    });
-  });
-
-  commentButtons.forEach(button => {
-    button.addEventListener("click", function () {
-      const postID = this.dataset.post;
-      const input = this.previousElementSibling;
-      if (input.value.trim()) {
-        tweeter.addComment(postID, input.value);
-        refresh();
-      }
-    });
-  });
-
-  deleteCommentButtons.forEach(button => {
-    button.addEventListener("click", function () {
-      const postID = this.dataset.post;
-      const commentID = this.dataset.comment;
-      tweeter.removeComment(postID, commentID);
-      refresh();
-    });
-  });
-}
-
-function refresh() {
-  renderPosts(tweeter);
-  addEventListeners();
-}
-
-twitButton.addEventListener("click", () => {
-  const text = postInput.value.trim();
+// מאזין לכפתור הוספת פוסט
+document.getElementById("twit-button").addEventListener("click", () => {
+  const text = document.getElementById("post-input").value.trim();
   if (text) {
     tweeter.addPost(text);
-    postInput.value = "";
-    refresh();
+    document.getElementById("post-input").value = "";
+    updateView();
   }
 });
 
-refresh();
+// מאזין לכל הקליקים בפוסטים (event delegation)
+document.getElementById("posts").addEventListener("click", (event) => {
+  const target = event.target;
 
-// const tweeter = Tweeter();
-// const renderer = Renderer();
+  // מחיקת פוסט
+  if (target.classList.contains("btn-delete-post")) {
+    const postId = target.getAttribute("data-post");
+    tweeter.removePost(postId);
+    updateView();
+  }
 
-// // This should render the initial dummy data
-// renderer.renderPosts(tweeter.getPosts());
+  // הוספת תגובה
+  if (target.classList.contains("comment-button")) {
+    const postId = target.getAttribute("data-post");
+    const input = target.previousElementSibling;
+    const commentText = input.value.trim();
+    if (commentText) {
+      tweeter.addComment(postId, commentText);
+      updateView();
+    }
+  }
 
+  // מחיקת תגובה
+  if (target.classList.contains("btn-delete-comment")) {
+    const postId = target.getAttribute("data-post");
+    const commentId = target.getAttribute("data-comment");
+    tweeter.removeComment(postId, commentId);
+    updateView();
+  }
+});
+
+// רענון התצוגה
+function updateView() {
+  renderPosts(tweeter);
+}
+updateView();
