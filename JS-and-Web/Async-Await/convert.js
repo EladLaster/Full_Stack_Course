@@ -23,7 +23,9 @@ async function processOrder(orderId) {
   const inventory = await productID.json();
   const stock = inventory.stock;
 
-  return stock > 0 
-  ? {success: true , massage: "order processed"}
-  : {success: false , massage: "out of stock"}
+  if (stock > 0) {
+        return { success: true, message: "Order processed" };
+      } else {
+        return { success: false, message: "Out of stock" };
+      }
 }
