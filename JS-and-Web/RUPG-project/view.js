@@ -1,4 +1,5 @@
   // זה התצוגה ופה בניתי בעזרת המידע שקיבלנו מהמודל את הHTML
+  // בחלק השני של המטלה הוספתי גם את updateSavedUsersDropdown
   // התצוגה דוחפת את המידע (המשוכתב) למסך
   
   const profile = document.getElementById("myProfile");
@@ -6,6 +7,7 @@
   const quote = document.getElementById("myQuote");
   const pokemon = document.getElementById("myPokemon");
   const about = document.getElementById("aboutMe");
+  const dropdown = document.getElementById("savedUsers");
 
   export function clearAll() {
     profile.innerHTML = "";
@@ -16,6 +18,11 @@
   }
 
   export function renderUsers(users) {
+
+    if (!users || !Array.isArray(users) || users.length === 0) {
+    console.warn("renderUsers called with invalid or empty users array");
+    return;
+  }
 
     // פרופיל ראשי
     const user = users[0];
@@ -69,7 +76,8 @@
     img.src = data.sprites.front_default;
 
     const name = document.createElement("h2");
-    name.textContent = "Favorite Pokemon: " + data.name;
+    const properName = data.name.charAt(0).toUpperCase() + data.name.slice(1).toLowerCase();
+    name.textContent = "Favorite Pokemon: " + properName;
 
     const hr = document.createElement("hr");
     hr.classList.add("custom-hr");
@@ -94,5 +102,17 @@
     about.appendChild(title);
     about.appendChild(desc);
   }
+
+  export function updateSavedUsersDropdown(users) {
+
+    dropdown.innerHTML = "<option value=''>-- Select Saved User --</option>";
+    for (let id in users) {
+        const option = document.createElement("option");
+        option.value = id;
+        option.textContent = users[id].profileName;
+        dropdown.appendChild(option);
+    }
+  }
+
 
 
