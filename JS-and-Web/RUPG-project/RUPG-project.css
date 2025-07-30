@@ -1,0 +1,150 @@
+/* כרטיס משתמש ראשי */
+.user-card {
+  display: flex;
+  align-items: center;   
+  gap: 15px;             
+  margin: 15px 0;
+  background-color: #17a2b8;
+  color: white;
+  width: 60%;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(23, 162, 184, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.user-card:hover {
+  background-color: #138496;
+}
+
+/* כרטיס אנשי קשר */
+#contactsButton {
+  width: 194px;
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  background-color: #3b82f6;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px 6px 0 0;
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  user-select: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: background-color 0.2s ease;
+}
+
+#contactsButton:hover {
+  background-color: #2563eb;
+}
+
+#myContacts {
+  display: none; 
+  position: fixed;
+  right: 20px;
+  top: 58px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 0 0 6px 6px;
+  width: 200px;
+  max-height: 220px;
+  overflow-y: auto;
+  padding: 10px 12px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#myContacts.active {
+  display: block;
+}
+
+/* ציטוט מעוצב */
+.fancy-quote {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  color: #444;
+  font-size: 1.3em;
+  line-height: 1.6;
+  max-width: 75%;
+  border-left: 4px solid #17a2b8;
+  padding-left: 12px;
+}
+
+/* כרטיס פוקימון */
+.pokemon-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #f0f8ff;
+  padding: 15px 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+  width: fit-content;
+  max-width: 75%;
+  transition: transform 0.3s ease;
+}
+
+.pokemon-card:hover {
+  transform: scale(1.05);
+}
+
+.pokemon-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* קו מפריד מותאם */
+.custom-hr {
+  width: 33%;
+  margin-left: 0;
+  border: none;
+  border-top: 2px solid #17a2b8;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+/* כותרת About Me */
+.about-title {
+  margin-bottom: 6px;  
+  font-weight: 700;
+  font-size: 1.5em;
+  color: #17a2b8;
+}
+
+/* טקסט About Me */
+.about-text {
+  /* width: 75%; */
+  margin-top: 0;
+  font-size: 1.1em;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* כפתור Generate User */
+#generateUser {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 10px rgba(40, 167, 69, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#generateUser:hover {
+  background-color: #218838;
+  box-shadow: 0 6px 14px rgba(33, 136, 56, 0.6);
+}
