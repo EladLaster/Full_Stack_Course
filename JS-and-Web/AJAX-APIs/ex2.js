@@ -14,11 +14,11 @@ button.addEventListener("click", () => {
   }
 
   fetchBook(type, value);
-  inputqueryType.value ='';
-  inputqueryValue.value ='';
+  inputqueryType.value = "";
+  inputqueryValue.value = "";
 });
 
-[inputqueryType, inputqueryValue].forEach(input => {
+[inputqueryType, inputqueryValue].forEach((input) => {
   input.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
       button.click();
@@ -32,34 +32,37 @@ function fetchBook(queryType, queryValue) {
 
   myBooks.innerHTML = "";
 
-  axios.get(url)
-    .then(response => {
-        const data = response.data;
+  axios
+    .get(url)
+    .then((response) => {
+      const data = response.data;
 
-        if (!data.items || data.totalItems === 0){
-            myBooks.innerHTML = "<p>No books found.</p>";
-            return;
-        }
-         
-        myBooks.innerHTML = "";
+      if (!data.items || data.totalItems === 0) {
+        myBooks.innerHTML = "<p>No books found.</p>";
+        return;
+      }
 
-        if (data.totalItems === 0) {
-            myBooks.innerHTML = "No book found.";
-        } else {
-            const book = data.items[0].volumeInfo;
-            myBooks.innerHTML = `
+      myBooks.innerHTML = "";
+
+      const book = data.items[0].volumeInfo;
+      const bookDiv = document.createElement("div");
+      bookDiv.innerHTML = `
             <h3>${book.title}</h3>
-            <p><strong>Author(s):</strong> ${book.authors?.join(", ") || "Unknown"}</p>
-            <p><strong>Description:</strong> ${book.description || "No description available."}</p>
+            <p><strong>Author(s):</strong> ${
+              book.authors?.join(", ") || "Unknown"
+            }</p>
+            <p><strong>Description:</strong> ${
+              book.description || "No description available."
+            }</p>
             `;
-        }
+
+      myBooks.appendChild(bookDiv);
     })
-    .catch(err => {
+    .catch((err) => {
       console.error("Error fetching data:", err);
       myBooks.innerHTML = `<p style="color:red;">Error fetching data: ${err.message}</p>`;
     });
 }
-
 
 // fetch("isbn", 9789814561778) - From Third World to First: The Singapore Story
 // fetch("title", "How to Win Friends and Influence People") - book by Dale Carnegie
