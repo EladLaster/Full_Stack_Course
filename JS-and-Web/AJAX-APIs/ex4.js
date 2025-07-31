@@ -41,12 +41,11 @@
 //   .catch(error => {
 //     console.error('Error uploading GIF:', error);
 //   });
-    const apiKey = "N7uUoKzIXiwqjZAV4Glv2XK9TuNTe6gb";
     const query = "cats";
 
     const container = document.getElementById("gif-container");
 
-    axios.get(`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${query}&limit=1`)
+    axios.get(`https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=${query}&limit=1`)
       
       .then(response => {
         const data = response.data;
