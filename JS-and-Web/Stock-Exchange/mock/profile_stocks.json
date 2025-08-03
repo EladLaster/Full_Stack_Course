@@ -1,0 +1,92 @@
+[
+  {
+    "symbol": "AAPL",
+    "price": 210.62,
+    "companyName": "Apple Inc.",
+    "exchange": "NASDAQ",
+    "industry": "Consumer Electronics",
+    "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide.",
+    "ceo": "Timothy D. Cook"
+  },
+  {
+    "symbol": "MSFT",
+    "price": 305.22,
+    "companyName": "Microsoft Corporation",
+    "exchange": "NASDAQ",
+    "industry": "Software—Infrastructure",
+    "description": "Microsoft Corporation develops, licenses, and supports software, services, devices, and solutions worldwide.",
+    "ceo": "Satya Nadella"
+  },
+  {
+    "symbol": "TSLA",
+    "price": 650.57,
+    "companyName": "Tesla, Inc.",
+    "exchange": "NASDAQ",
+    "industry": "Auto Manufacturers",
+    "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems.",
+    "ceo": "Elon Musk"
+  },
+  {
+    "symbol": "GOOGL",
+    "price": 2803.79,
+    "companyName": "Alphabet Inc.",
+    "exchange": "NASDAQ",
+    "industry": "Internet Content & Information",
+    "description": "Alphabet Inc., through its subsidiaries, provides online advertising services in the United States and internationally.",
+    "ceo": "Sundar Pichai"
+  },
+  {
+    "symbol": "AMZN",
+    "price": 3331.48,
+    "companyName": "Amazon.com, Inc.",
+    "exchange": "NASDAQ",
+    "industry": "Internet Retail",
+    "description": "Amazon.com, Inc. engages in the retail sale of consumer products and subscriptions in North America and internationally.",
+    "ceo": "Andy Jassy"
+  },
+  {
+    "symbol": "FB",
+    "price": 370.17,
+    "companyName": "Meta Platforms, Inc.",
+    "exchange": "NASDAQ",
+    "industry": "Internet Content & Information",
+    "description": "Meta Platforms, Inc. develops products that enable people to connect and share with friends and family through mobile devices and personal computers.",
+    "ceo": "Mark Zuckerberg"
+  },
+  {
+    "symbol": "NFLX",
+    "price": 525.15,
+    "companyName": "Netflix, Inc.",
+    "exchange": "NASDAQ",
+    "industry": "Entertainment",
+    "description": "Netflix, Inc. provides subscription streaming entertainment services.",
+    "ceo": "Reed Hastings"
+  },
+  {
+    "symbol": "NVDA",
+    "price": 198.12,
+    "companyName": "NVIDIA Corporation",
+    "exchange": "NASDAQ",
+    "industry": "Semiconductors",
+    "description": "NVIDIA Corporation operates as a visual computing company worldwide.",
+    "ceo": "Jensen Huang"
+  },
+  {
+    "symbol": "INTC",
+    "price": 56.73,
+    "companyName": "Intel Corporation",
+    "exchange": "NASDAQ",
+    "industry": "Semiconductors",
+    "description": "Intel Corporation designs, manufactures, and sells computer products and technologies worldwide.",
+    "ceo": "Pat Gelsinger"
+  },
+  {
+    "symbol": "CSCO",
+    "price": 53.85,
+    "companyName": "Cisco Systems, Inc.",
+    "exchange": "NASDAQ",
+    "industry": "Communication Equipment",
+    "description": "Cisco Systems, Inc. designs and sells a range of technologies that power the Internet.",
+    "ceo": "Chuck Robbins"
+  }
+]

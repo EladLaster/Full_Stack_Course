@@ -1,0 +1,92 @@
+[
+  {
+    "symbol": "TALO",
+    "price": 12.45,
+    "companyName": "Taloy Industries",
+    "exchange": "NASDAQ",
+    "industry": "Industrial Machinery",
+    "description": "Taloy Industries manufactures specialized machinery for agricultural use, serving small and medium farms worldwide.",
+    "ceo": "Rachel Levin"
+  },
+  {
+    "symbol": "NEOT",
+    "price": 9.87,
+    "companyName": "Neotek Solutions",
+    "exchange": "NYSE",
+    "industry": "Software Development",
+    "description": "Neotek Solutions develops cloud-based software products focused on small business management.",
+    "ceo": "David Cohen"
+  },
+  {
+    "symbol": "BIOX",
+    "price": 18.33,
+    "companyName": "BioX Pharmaceuticals",
+    "exchange": "NASDAQ",
+    "industry": "Biotechnology",
+    "description": "BioX Pharmaceuticals researches and develops innovative treatments for rare diseases.",
+    "ceo": "Maya Shwartz"
+  },
+  {
+    "symbol": "GREX",
+    "price": 7.25,
+    "companyName": "Greenex Energy",
+    "exchange": "NYSE",
+    "industry": "Renewable Energy",
+    "description": "Greenex Energy specializes in solar panel production and sustainable energy solutions for residential customers.",
+    "ceo": "Eli Ben-David"
+  },
+  {
+    "symbol": "SYNR",
+    "price": 14.90,
+    "companyName": "Synrare Technologies",
+    "exchange": "NASDAQ",
+    "industry": "Technology Hardware",
+    "description": "Synrare Technologies designs innovative IoT devices for smart homes and connected living.",
+    "ceo": "Orly Katz"
+  },
+  {
+    "symbol": "VITL",
+    "price": 11.50,
+    "companyName": "Vitalis Health",
+    "exchange": "NYSE",
+    "industry": "Healthcare Services",
+    "description": "Vitalis Health provides outpatient care and telemedicine services in rural areas.",
+    "ceo": "Yoav Levi"
+  },
+  {
+    "symbol": "FLEX",
+    "price": 8.70,
+    "companyName": "Flexon Packaging",
+    "exchange": "NASDAQ",
+    "industry": "Packaging & Containers",
+    "description": "Flexon Packaging manufactures eco-friendly packaging solutions for the food and beverage industry.",
+    "ceo": "Neta Gross"
+  },
+  {
+    "symbol": "WAVR",
+    "price": 6.85,
+    "companyName": "Waverly Systems",
+    "exchange": "NYSE",
+    "industry": "Telecommunications",
+    "description": "Waverly Systems provides wireless communication infrastructure for underserved communities.",
+    "ceo": "Rami Cohen"
+  },
+  {
+    "symbol": "HARB",
+    "price": 15.20,
+    "companyName": "Harbor Marine",
+    "exchange": "NASDAQ",
+    "industry": "Transportation",
+    "description": "Harbor Marine operates coastal freight and logistics services in North America.",
+    "ceo": "Shira Azulay"
+  },
+  {
+    "symbol": "CETI",
+    "price": 10.95,
+    "companyName": "Ceti Electronics",
+    "exchange": "NYSE",
+    "industry": "Consumer Electronics",
+    "description": "Ceti Electronics produces affordable consumer gadgets with focus on emerging markets.",
+    "ceo": "Itai Rosen"
+  }
+]

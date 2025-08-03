@@ -1,0 +1,136 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f9fafb 100%);
+  color: #1e293b;
+  box-sizing: border-box;
+}
+
+#stock-marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #1e293b;
+  color: white;
+  font-weight: 600;
+  white-space: nowrap;
+  padding: 10px 0;
+  border-bottom: 2px solid #64748b;
+  position: relative;
+  height: 30px;
+  display: flex;
+  align-items: center; 
+}
+
+#stock-marquee {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee-scroll 40s linear infinite;
+}
+
+.marquee-item {
+  display: inline-block;
+  margin-right: 50px;
+  font-size: 14px;
+  user-select: none;
+}
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: white;
+  padding: 35px 40px;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+h1 {
+  margin-bottom: 28px;
+  font-weight: 900;
+  font-size: 2.8rem;
+  color: #0f172a;
+  letter-spacing: 0.05em;
+  text-shadow: 0 1px 2px rgb(0 0 0 / 0.1);
+}
+
+p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  color: #475569;
+  font-weight: 600;
+  border-left: 4px solid transparent;
+  padding-left: 12px;
+  transition: border-color 0.3s ease;
+}
+
+p strong {
+  color: #334155;
+}
+
+p em {
+  font-style: italic;
+  color: #64748b;
+  font-weight: 400;
+}
+
+p:hover {
+  border-left-color: #2563eb;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 10px 24px;
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgb(37 99 235 / 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.back-link:hover {
+  background-color: #1e40af;
+  box-shadow: 0 8px 25px rgb(30 64 175 / 0.6);
+  text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 20px 15px;
+  }
+
+  .container {
+    padding: 25px 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 14px;
+  }
+
+  .back-link {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
