@@ -1,8 +1,11 @@
 import { getStockMock } from './model.js';
 import { showCompanyDetails, showMessage } from './view.js';
+import {Marquee} from './marquee.js';
 
+const container = document.getElementById('stock-marquee-container');
 
-
+const marquee = new Marquee(container);
+marquee.render();
 
 const stockFiles = ["stocks", "stocks2", "stocks3", "stocks4"];
 

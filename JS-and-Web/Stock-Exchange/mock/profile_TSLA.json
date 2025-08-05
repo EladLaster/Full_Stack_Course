@@ -1,0 +1,11 @@
+[
+  {
+    "symbol": "TSLA",
+    "price": 650.30,
+    "companyName": "Tesla, Inc.",
+    "exchange": "NASDAQ",
+    "industry": "Auto Manufacturers",
+    "description": "Tesla, Inc. designs, develops, manufactures, and sells electric vehicles and energy generation and storage systems.",
+    "ceo": "Elon Musk"
+  }
+]

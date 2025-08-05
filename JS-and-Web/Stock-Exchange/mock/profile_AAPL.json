@@ -1,0 +1,11 @@
+[
+  {
+    "symbol": "AAPL",
+    "price": 210.62,
+    "companyName": "Apple Inc.",
+    "exchange": "NASDAQ",
+    "industry": "Consumer Electronics",
+    "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide.",
+    "ceo": "Timothy D. Cook"
+  }
+]

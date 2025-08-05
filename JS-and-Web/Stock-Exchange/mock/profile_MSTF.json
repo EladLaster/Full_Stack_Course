@@ -1,0 +1,11 @@
+[
+  {
+    "symbol": "MSFT",
+    "price": 330.12,
+    "companyName": "Microsoft Corporation",
+    "exchange": "NASDAQ",
+    "industry": "Software—Infrastructure",
+    "description": "Microsoft develops, licenses, and supports software, services, devices, and solutions worldwide.",
+    "ceo": "Satya Nadella"
+  }
+]

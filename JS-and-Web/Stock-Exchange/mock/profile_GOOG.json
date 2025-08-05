@@ -1,0 +1,11 @@
+[
+  {
+    "symbol": "GOOG",
+    "price": 135.75,
+    "companyName": "Alphabet Inc.",
+    "exchange": "NASDAQ",
+    "industry": "Internet Content & Information",
+    "description": "Alphabet provides online advertising services, search, cloud computing, and hardware products.",
+    "ceo": "Sundar Pichai"
+  }
+]

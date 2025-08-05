@@ -1,0 +1,11 @@
+[
+  {
+    "symbol": "AMZN",
+    "price": 3300.50,
+    "companyName": "Amazon.com, Inc.",
+    "exchange": "NASDAQ",
+    "industry": "Internet Retail",
+    "description": "Amazon.com engages in the retail sale of consumer products and subscriptions in North America and internationally.",
+    "ceo": "Andy Jassy"
+  }
+]

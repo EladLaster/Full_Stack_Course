@@ -1,10 +1,14 @@
 import { getStockMock } from './model.js';
 import { showStocksData, showMessage } from './view.js';
+import {Marquee} from './marquee.js';
 
 const searchBtn = document.getElementById("searchBtn");
 const inputSymbol = document.getElementById("inputSymbol");
 const loading = document.getElementById("loading");
+const container = document.getElementById('stock-marquee-container');
 
+const marquee = new Marquee(container);
+marquee.render();
 
 
 async function loadStock(symbol) {
