@@ -37,9 +37,10 @@ export function App2() {
     <div>
       <Company name={companies[0].name} revenue={companies[0].revenue} />
       {generateCompanyTags(companies)}
-      {companies.map(c => <Company name={c.name} revenue={c.revenue} />)}
+      {companies.map(c => <Company key={c.name} name={c.name} revenue={c.revenue} />)}
       {companies.map(c =>
         <Company
+          key={upperCase(c.name)}
           name={upperCase(c.name)}
           revenue={c.revenue}
           upperCase={upperCase}
