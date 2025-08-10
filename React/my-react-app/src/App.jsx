@@ -1,28 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { showCompany } from "./Intro&JSX/showCompany.jsx";
+import { getClassName } from "./Intro&JSX/getClassName.jsx";
 import './App.css'
 export function App() {
-  
+
   let companies = [
-    { name: "Tesla", revenue: 140 },
-    { name: "Microsoft", revenue: 300 },
-    { name: "Google", revenue: 600 }
-  ]
-  const temperature = 20;
-
-
-  const showCompany = (name, revenue) => { 
-    return <div id={name} key = {name}> {name} makes {revenue} every year</div> 
-  }
-  const getClassName = (temperature) => { 
-    if(temperature < 15)
-        return "freezing"
-      else if ( temperature > 15 && temperature < 30)
-        return "fair"
-      else
-        return "hell-scape"
-  }
+        { name: "Tesla", revenue: 140 },
+        { name: "Microsoft", revenue: 300 },
+        { name: "Google", revenue: 600 }
+    ]
+    const temperature = 20;
 
   return (
     <div>
