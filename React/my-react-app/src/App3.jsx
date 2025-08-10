@@ -23,10 +23,10 @@ export function App3() {
 
   return (
     <div>
-        <h1>Exercise 1</h1>
+        <h2>Exercise 1</h2>
 
         <Hudini/>
-        <h1>Exercise 2 + 3 + 4</h1>
+        <h2>Exercise 2 + 3 + 4</h2>
 
         <button onClick={() => switchPage("Landing")}>Landing</button>
         <button onClick={() => switchPage("Home")}>Home</button>
