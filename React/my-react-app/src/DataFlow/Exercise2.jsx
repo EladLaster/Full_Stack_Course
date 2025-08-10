@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { List } from "./List";
 import { Conversation } from "./Conversation";
+import './styles.css';
+
 
 export function Exercise2 (){
 
     const[state,setState] = useState({
-    displayConversation: true,
+    displayConversation: null,
     conversations: [
         {
             with: "Laura", convo: [
@@ -36,7 +38,30 @@ export function Exercise2 (){
 )
 
 const contacts = state.conversations.map((person) => person.with);
+ const currentConvoObj = state.conversations.find(c => c.with === state.displayConversation);
+
+function displayConvo (name){
+     setState(prev => ({
+      ...prev,
+      displayConversation: name,
+    }));
+}
+
+function goBack() {
+    setState(prev => ({ ...prev, displayConversation: null }));
+  }
+
+
 return (
-    <div>{state.displayConversation ? <List contacts={contacts}/> : <Conversation/>} </div>
+<div>
+  {state.displayConversation === null ? (
+    <List contacts={contacts} displayConvo={displayConvo} />
+  ) : (
+    <Conversation convo={currentConvoObj.convo} 
+    sender={state.displayConversation} 
+    goBack={goBack}
+    />
+  )}
+</div>
 )
 }

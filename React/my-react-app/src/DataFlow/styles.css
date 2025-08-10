@@ -1,0 +1,22 @@
+/* הגיפיטי בנה לי את זה :) */
+
+ul {
+  list-style: none;      /* מסיר נקודות מהרשימה */
+  padding: 0;            /* מסיר ריווח פנימי */
+  margin: 0;             /* מסיר ריווח חיצוני */
+  max-width: 300px;      /* רוחב מקסימלי לרשימה */
+  font-family: Arial, sans-serif; /* גופן קריא ונקי */
+  color: #333;           /* צבע טקסט כהה */
+  margin-left: 100px;
+}
+
+li {
+  padding: 8px 12px;     /* ריווח פנימי */
+  cursor: pointer;       /* מציג סמן יד בהובר */
+  border-bottom: 1px solid #ddd; /* קו תחתון מפריד בין פריטים */
+  transition: background-color 0.2s ease; /* אנימציה חלקה */
+}
+
+li:hover {
+  background-color: #f0f0f0; /* צבע רקע בהובר */
+}

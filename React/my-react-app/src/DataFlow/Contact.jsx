@@ -1,5 +1,7 @@
-export function Contact({name}){
+export function Contact({name, displayConvo }){
     return (
-        <li>{name}</li>
+         <li onClick={() => displayConvo(name)}>
+      {name}
+    </li>
     )
 }
