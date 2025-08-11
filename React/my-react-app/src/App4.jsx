@@ -6,9 +6,9 @@ export function App4() {
 
   return (
     <div>
-        <h2>Exercise1</h2>
+        <h2>Exercise 1</h2>
         <Exercise1/>
-        <h2>Exercise2</h2>
+        <h2>Exercise 2</h2>
         <Exercise2/>
     </div>
   )

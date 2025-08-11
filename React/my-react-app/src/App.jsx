@@ -13,14 +13,14 @@ export function App() {
   return (
     <div>
       <div className="ex-space">
-        <h4 className='ex-title'>Exercise 1</h4>
+        <h2 className='ex-title'>Exercise 1</h2>
         <div className="exercise" id="ex-1">
           {companies.map(c=>showCompany(c.name,c.revenue))}
         </div>
       </div>
       
       <div className="ex-space">
-        <h4 className='ex-title'>Exercise 2</h4>
+        <h2 className='ex-title'>Exercise 2</h2>
         <div className="exercise" id="ex-2">
           <div id="weatherBox" className={getClassName(temperature)}></div>
         </div>
