@@ -3,11 +3,12 @@ import { useState } from "react";
 const Exercise2 = () => {
   const [name, setName] = useState("");
   const [fruit, setFruit] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleFruitChange = (e) => {
     const selectedFruit = e.target.value;
     setFruit(selectedFruit);
-    console.log(`${name} selected ${selectedFruit}`);
+    setMessage(`${name} selected ${selectedFruit}`);
   };
 
   return (
@@ -30,6 +31,9 @@ const Exercise2 = () => {
         <option value="Mango">Mango</option>
         <option value="Orange">Orange</option>
       </select>
+
+       {message && <p>{message}</p>}
+
     </div>
   );
 };
