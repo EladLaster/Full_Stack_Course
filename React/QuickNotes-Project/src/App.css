@@ -25,6 +25,9 @@
   gap: 16px;
   margin-top: 20px;
 }
+.textArea{
+  padding: 5px;
+}
 
 button.send-button {
   width: 100%;
@@ -61,9 +64,10 @@ button.send-button {
   background: #c0392b;
 }
 
-.note-card p {
-  margin: 0 0 8px 0;
-  white-space: pre-wrap;
+.note-card h4, 
+.note-card h3 {
+  margin: 0;
+  padding: 0;
 }
 
 .note-card small {

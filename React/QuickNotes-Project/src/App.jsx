@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [titleText, setTitleText] = useState("");
   const [text, setText] = useState("");
   const [notes, setNotes] = useState([]);
 
@@ -11,6 +12,7 @@ function App() {
       return;
 
     const newNote = {
+    titleText,
     text,
     date: new Date().toLocaleString("en-US", {
       month: "short",
@@ -24,6 +26,7 @@ function App() {
 
     setNotes(prev => [...prev, newNote]);
     setText("");
+    setTitleText("");
   }
 
   function handleKeyDown(e) {
@@ -43,7 +46,13 @@ function App() {
   return (
     <>
     <div className="container">
-      <textarea
+      <input
+        placeholder="title..."
+        value={titleText}
+        onChange={(e) => setTitleText(e.target.value)}
+      >
+      </input>
+      <textarea className="textArea"
         rows="10"
         cols="50"
         placeholder="write her..."
@@ -53,19 +62,21 @@ function App() {
       ></textarea>
       <br></br>
       <button className="send-button" onClick={send}>Add</button>
+    </div>
 
       {notes.length > 0 && (
         <div className="notes-grid">
           {notes.map((note, index) => (
             <div key={index}className="note-card">
               <button onClick= {()=>deleteMe(index)}>x</button>
-              <p>{note.text}</p>
               <small>{note.date}</small>
+              {note.titleText && <h3>{note.titleText}</h3>}
+              <h4>{note.text}</h4>
             </div>
           ))}
         </div>
       )}
-      </div>
+      
     </>
   );
 }
