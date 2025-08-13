@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, NavLink } from 'react-router-dom';
 import App from './App.jsx';
 import App2 from './App2.jsx';
 import App3 from './App3.jsx';
@@ -10,12 +10,12 @@ export default function MainRouter() {
   return (
     <>
       <nav>
-        <Link to="/">Intro & JSX</Link> |{' '}
-        <Link to="/props">Props</Link> |{' '}
-        <Link to="/states">States</Link> |{' '}
-        <Link to="/inputs">Inputs</Link> |{' '}
-        <Link to="/dataflow">DataFlow</Link> |{' '}
-        <Link to="/effects">Effects</Link>
+        <NavLink to="/">Intro & JSX</NavLink> |{' '}
+        <NavLink to="/props">Props</NavLink> |{' '}
+        <NavLink to="/states">States</NavLink> |{' '}
+        <NavLink to="/inputs">Inputs</NavLink> |{' '}
+        <NavLink to="/dataflow">DataFlow</NavLink> |{' '}
+        <NavLink to="/effects">Effects</NavLink>
       </nav>
 
       <Routes>
