@@ -1,135 +1,14 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.container{
-  max-width: 500px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  background-color: white;
+/* Wrapper שמרכז את כל האפליקציה */
+.app-container {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-
-}
-
-.notes-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 16px;
-  margin-top: 20px;
-}
-.textArea{
-  padding: 5px;
-}
-
-button.send-button {
+  flex-direction: column;  /* קומפוננטות מלמעלה למטה */
+  align-items: center;     /* מרכז אופקית */
   width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  cursor: pointer;
-}
-.note-card {
-  position: relative;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background-color: #f9f9f9;
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
-  text-align: left;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
-
-.note-card button {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: #e74c3c;
-  color: white;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  cursor: pointer;
-  padding: 0;
-  font-size: 14px;
+/* מוסיף רווח בין קומפוננטות */
+.app-container > * {
+  margin-bottom: 20px;
 }
-
-.note-card button:hover {
-  background: #c0392b;
-}
-
-.note-card h4, 
-.note-card h3 {
-  margin: 0;
-  padding: 0;
-}
-
-.note-card small {
-  color: #555;
-}
-
-.ReactModal__Overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-
-.ReactModal__Content {
-  position: relative;
-  background-color: #fff;
-  padding: 20px 30px;
-  border-radius: 10px;
-  max-width: 150px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-
-/* כפתור סגירה */
-.modal-close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: #e74c3c;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  font-size: 16px;
-  cursor: pointer;
-  line-height: 0;
-}
-
-.modal-close-button:hover {
-  background: #c0392b;
-}
-
-/* טקסט בתוך המודל */
-.modal-content h2 {
-  margin-top: 0;
-}
-
-.modal-content p {
-  margin: 10px 0;
-  line-height: 1.5;
-}
-
-.modal-content small {
-  color: #555;
-}
-
-
