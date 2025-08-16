@@ -10,14 +10,14 @@ export function ShoppingCartReduce(state,action){
                 itemCount: state.itemCount + 1,
             };
         case "REMOVE":
+            const filteredItems = state.items.filter(item => item.id !== action.data);
             return {
                 ...state,
-                items: state.items.filter(item => item.id !== action.data),
-                total: state.items
-                .filter(item => item.id !== action.data)
-                .reduce((sum, item) => sum + item.price, 0),
-                itemCount: state.items.filter(item => item.id !== action.data).length,
+                items: filteredItems,
+                total: filteredItems.reduce((sum, item) => sum + item.price, 0),
+                itemCount: filteredItems.length,
             };
+
 
          case "CLEAR_CART":
             return { items: [], total: 0, itemCount: 0 };

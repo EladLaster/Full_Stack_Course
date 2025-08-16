@@ -5,7 +5,7 @@ import App3 from './App3.jsx';
 import App4 from './App4.jsx';
 import App5 from './App5.jsx';
 import App6 from './App6.jsx';
-import { ShoppingCart } from './Reduce/shoppingCart.jsx';
+import App7 from './App7.jsx';
 
 export default function MainRouter() {
   return (
@@ -17,7 +17,7 @@ export default function MainRouter() {
         <NavLink to="/inputs">Inputs</NavLink> |{' '}
         <NavLink to="/dataflow">DataFlow</NavLink> |{' '}
         <NavLink to="/effects">Effects</NavLink> |{' '}
-        <NavLink to="/shoppingCart">ShoppingCart</NavLink>
+        <NavLink to="/context&reducer">Context & Reducer</NavLink> |{' '}
       </nav>
 
       <Routes>
@@ -27,7 +27,7 @@ export default function MainRouter() {
         <Route path="/inputs" element={<App4 />} />
         <Route path="/dataflow" element={<App5 />} />
         <Route path="/effects" element={<App6 />} />
-        <Route path="/shoppingCart" element = {<ShoppingCart/>} />
+        <Route path="/context&reducer" element = {<App7/>} />
       </Routes>
     </>
   );

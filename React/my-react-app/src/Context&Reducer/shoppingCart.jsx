@@ -1,10 +1,10 @@
-import { useReducer } from "react";
+import { useReducer, useState } from "react";
 import { ShoppingCartReduce } from "./shoppingCartReduce";
 
 export function ShoppingCart() {
-//   const [items, setItems] = useState([]);
-//   const [total, setTotal] = useState(0);
-//   const [itemCount, setItemCount] = useState(0);
+  // const [items, setItems] = useState([]);
+  // const [total, setTotal] = useState(0);
+  // const [itemCount, setItemCount] = useState(0);
 
   const [state, dispatch] = useReducer(ShoppingCartReduce, {
     items: [],
@@ -32,13 +32,11 @@ export function ShoppingCart() {
 
   return (
     <div>
-      {/* <h2>Shopping Cart ({itemCount} items) - Total: ${total}</h2>
-       */}
+        {/* <h2>Shopping Cart ({itemCount} items) - Total: ${total}</h2> */}
+       
        <h2>Shopping Cart ({state.itemCount} items) - Total: ${state.total}</h2>
 
-      <button onClick={() => addItem({ name: "Laptop", price: 999 })}>
-  Add Laptop
-</button>
+      <button onClick={() => addItem({ name: "Laptop", price: 999 })}>Add Laptop</button>
 
 <ul>
   {state.items.map(item => (
