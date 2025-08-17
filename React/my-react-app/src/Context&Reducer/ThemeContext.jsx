@@ -3,9 +3,19 @@ import { createContext, useContext, useState, useEffect } from "react";
 export const themeContext = createContext(null);
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
-  const [fontSize, setFontSize] = useState(() => localStorage.getItem("fontSize") || "medium");
+  const [theme, setTheme] = useState("light");
+  const [fontSize, setFontSize] = useState("medium");
 
+  //Read from localStorage
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    const savedFontSize = localStorage.getItem("fontSize");
+
+    if (savedTheme) setTheme(savedTheme);
+    if (savedFontSize) setFontSize(savedFontSize);
+  }, []);
+
+  //Wrtie to localStorage
   useEffect(() => {
     localStorage.setItem("theme", theme);
   }, [theme]);
