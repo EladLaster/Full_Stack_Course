@@ -3,17 +3,17 @@ import { createContext, useContext, useState, useEffect } from "react";
 export const themeContext = createContext(null);
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState("light");
-  const [fontSize, setFontSize] = useState("medium");
-
   //Read from localStorage
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    const savedFontSize = localStorage.getItem("fontSize");
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
+  const [fontSize, setFontSize] = useState(() => localStorage.getItem("fontSize") || "medium");
 
-    if (savedTheme) setTheme(savedTheme);
-    if (savedFontSize) setFontSize(savedFontSize);
-  }, []);
+  // useEffect(() => {
+  //   const savedTheme = localStorage.getItem("theme");
+  //   const savedFontSize = localStorage.getItem("fontSize");
+
+  //   if (savedTheme) setTheme(savedTheme);
+  //   if (savedFontSize) setFontSize(savedFontSize);
+  // }, []);
 
   //Wrtie to localStorage
   useEffect(() => {
