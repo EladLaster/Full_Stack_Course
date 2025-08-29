@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "jquery": "^3.7.1"
+  }
+}
