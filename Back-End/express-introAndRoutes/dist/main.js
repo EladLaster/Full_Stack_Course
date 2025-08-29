@@ -16,12 +16,17 @@ async function checkPrice() {
     const productName = input.value;
     if(!productName) return;
 
+
     try {
         const res = await fetch(`/priceCheck/${productName}`)
         const data = await res.json()
 
         if (res.ok) {
+            if (productName === "all") {
+                results.textContent = data.map(p => `${p.name}: ${p.price}$`).join("\n");
+            } else {
             results.textContent = `Price: ${data.price}$`;
+            }
         } else {
             results.textContent = data.error || "Product not found";
         }
@@ -30,7 +35,9 @@ async function checkPrice() {
         console.error("Error:", err)
         results.textContent = "Network error";
     }
-    input.value = "" 
+    finally {
+        input.value = "";
+    }
 }
 
 async function buyItem() {
@@ -66,7 +73,9 @@ async function buyItem() {
         resultDiv2.textContent = "Network error";
     }
 
-    input2.value = "";
+    finally {
+        input2.value = "";
+    }
 }
 
 

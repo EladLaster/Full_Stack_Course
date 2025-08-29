@@ -15,10 +15,13 @@ const store = [
 //   res.send('Server is up and running smoothly')
 // })
 
-app.use(express.static(path.join(__dirname, 'dist')))
+app.use(express.static('dist'))
 
 app.get('/priceCheck/:name',(req,res) => {
     const productName = req.params.name;
+
+    if(productName === "all") return res.status(200).json(store);
+
     const product  = store.find(obj => obj.name === productName)
 
     if (!product) return res.status(404).json({ error: "Product not found" });
