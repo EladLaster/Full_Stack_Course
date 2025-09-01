@@ -1,6 +1,9 @@
-function errorHandling(err, req, res, next) {
-    console.error(`[ERROR] ${err.message}`);
-    res.status(400).json({ error: err.message });
-}
+function errorHandling (err, req, res, next){
+    const status = err.status || 500;
+    res.status(status).json({
+        message: err.message,
+        errors: err.details || []
+    });
+};
 
 module.exports = { errorHandling };

@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "express": "^5.1.0"
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1"
   }
 }
