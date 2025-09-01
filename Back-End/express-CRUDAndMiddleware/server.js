@@ -10,9 +10,13 @@ app.get('/sanity',(req,res) => {
     res.send("Server is up and running");
 })
 
+app.get('/words', (req,res) => {
+    res.json(wordCounter)
+})
+
 app.get('/word/:word',(req,res) => {
-    const ward = req.params.ward;
-    const count = wordCounter[ward] || 0;
+    const word = req.params.word;
+    const count = wordCounter[word] || 0;
     res.json({count});
 })
 
