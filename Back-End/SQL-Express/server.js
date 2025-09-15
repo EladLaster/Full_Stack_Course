@@ -1,9 +1,13 @@
 require('dotenv').config();
 const express = require("express");
 const { sequelize , User} = require("./db/models");
-const { json } = require('sequelize');
+const multer = require("multer");
+const upload = multer({dest:"public/"});
+const cloudinary = require('cloudinary');
+const fs = require("fs");
+
 const app = express();
-const PORT = 3030;
+const PORT = process.env.PORT;
 console.log('DB_CONNECTION:', process.env.DB_CONNECTION);
 
 app.use(express.json());
@@ -47,7 +51,7 @@ app.get("/users/:id", async (req, res) => {
   }
 });
 
-  app.post("/Users", async (req, res) => {
+  app.post("/Users", upload.single("image"), async (req, res) => {
   try {
     const { firstName, email, age } = req.body;
 
@@ -55,13 +59,21 @@ app.get("/users/:id", async (req, res) => {
       return res.status(400).json({ error: "firstName, email and age are required" });
     }
 
+    let imageURL = null;
+
+    if (req.file) {
+      const uploadResult = await cloudinary.uploader.upload(req.file.path);
+      imageURL = uploadResult.secure_url;
+    }
+
+
     const query = `
-      INSERT INTO Users (firstName, email, age,createdAt,updatedAt)
-      VALUES (:firstName, :email, :age,NOW(),NOW())
+      INSERT INTO Users (firstName, email, age, imageURL, createdAt,updatedAt)
+      VALUES (:firstName, :email, :age, :imageURL, NOW(),NOW())
     `;
 
     const [createdId] = await sequelize.query(query, {
-      replacements: { firstName, email, age },
+      replacements: { firstName, email, age , imageURL},
     });
 
     const [result,metadata] = await sequelize.query("SELECT * FROM Users WHERE id = :id", {
@@ -73,6 +85,10 @@ app.get("/users/:id", async (req, res) => {
   } catch (error) {
     console.error("Error creating user:", error);
     res.status(500).json({ error: "Internal server error" });
+  }
+  finally {
+    if(req.file)
+      await fs.promises.unlink(req.file.path).catch(console.error);
   }
 });
 
@@ -101,20 +117,20 @@ app.get("/ORM/users/:id", async (req, res) => {
     if (isNaN(id)) 
       return res.status(400).json({ error: "Invalid user id" });
 
-    const user = await User.findAll({where: { id },raw: true});
+    const users = await User.findAll({where: { id },raw: true});
     
-    if (!user) 
+    if (!users || users.length === 0) 
       return res.status(404).json({ error: "User not found" });
 
-    console.log(user);
-    res.json(user);
+    console.log(users[0]);
+    res.json(users[0]);
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Internal server error" });
   }
 });
 
-  app.post("/ORM/Users", async (req, res) => {
+  app.post("/ORM/Users", upload.single("image"), async (req, res) => {
   try {
     const { firstName, email, age } = req.body;
 
@@ -122,17 +138,30 @@ app.get("/ORM/users/:id", async (req, res) => {
       return res.status(400).json({ error: "firstName, email and age are required" });
     }
 
+    let imageURL = null;
+
+    if (req.file) {
+      const uploadResult = await cloudinary.uploader.upload(req.file.path);
+      imageURL = uploadResult.secure_url;
+    }
+
+
     const user = await User.create({
     firstName,
     email,
-    age
-    });
+    age,
+    imageURL
+    }); 
 
     console.log(user.dataValues);
     res.json(user.dataValues);
   } catch (error) {
     console.error("Error creating user:", error);
     res.status(500).json({ error: "Internal server error" });
+  }
+  finally {
+    if(req.file)
+      await fs.promises.unlink(req.file.path).catch(console.error);
   }
 });
 
